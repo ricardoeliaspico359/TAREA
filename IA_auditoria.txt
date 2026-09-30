@@ -1,0 +1,36 @@
+================================================================================
+NOTAS DE AUDITORÍA Y CORRECCIONES EN INDEX.HTML
+================================================================================
+
+1. Títulos y jerarquía (H1, H2)
+- Observación: Había riesgo de tener dos <h1> en la página (uno arriba con el nombre de la universidad y otro con el título del portal).
+- Corrección: Dejé un solo <h1> en todo el documento, ubicado dentro de <main> para "Portal de Registro Estudiantil y Mesa de Ayuda de TI". El nombre de la universidad en el <header> lo pasé a un párrafo con negrita (<p><strong>), y las demás secciones principales ("Formulario...", "Preguntas Frecuentes", "Soporte...") quedaron con <h2> para mantener un orden lógico y accesible.
+
+2. Opciones de jornada (Radio buttons)
+- Observación: Las opciones Matutina, Vespertina y Nocturna estaban sueltas, lo que hace que un lector de pantalla lea las palabras sin explicar a qué pregunta pertenecen.
+- Corrección: Agrupé las tres opciones dentro de una etiqueta <fieldset> y le coloqué su título con <legend>Jornada Académica:</legend>. Además, verifiqué que compartan el mismo name="jornada" para que solo se pueda elegir una a la vez.
+
+3. Conexión de etiquetas e inputs (Labels e IDs)
+- Observación: Cada campo debe estar formalmente vinculado a su texto para que, al dar clic sobre el nombre del campo, el cursor se posicione directamente en la casilla.
+- Corrección: Revisé que cada <label> tenga su atributo 'for' apuntando exactamente al 'id' de su respectivo <input> (en nombres, cédula, correo y la casilla de términos).
+
+4. Validación de la cédula sin JavaScript
+- Observación: El campo de cédula permitía ingresar cualquier texto o números incompletos sin avisar del error.
+- Corrección: Le agregué al input los atributos inputmode="numeric", pattern="[0-9]{10}", maxlength="10" y required. Con esto el navegador exige exactamente 10 dígitos y en teléfonos despliega el teclado numérico directamente.
+
+5. Opción neutra en el selector de carreras
+- Observación: El menú desplegable venía con la primera carrera preseleccionada, permitiendo que alguien envíe el formulario sin darse cuenta de qué eligió.
+- Corrección: Añadí como primera opción un mensaje neutro: <option value="" disabled selected>Seleccione una carrera</option>. Como el <select> tiene el atributo required, el formulario no se enviará hasta que el estudiante elija una carrera real.
+
+6. Preguntas frecuentes desplegables
+- Observación: Se necesitaba que las respuestas se pudieran abrir y cerrar sin usar JavaScript ni estilos CSS.
+- Corrección: Envolví cada pregunta dentro de un elemento <details>, colocando la pregunta dentro del <summary> y la respuesta en un párrafo <p>. Así el navegador maneja la apertura y cierre de forma 100% nativa.
+
+7. Sección de contacto y enlace del menú
+- Observación: El menú de arriba tiene un enlace que lleva a #contacto, pero el bloque de soporte no tenía ese identificador. Además, los datos del docente debían tener semántica adecuada.
+- Corrección: Le agregué el id="contacto" al contenedor <aside> para que el enlace del menú funcione bien. La información del docente la encerré en una etiqueta <address> y convertí su correo en un enlace cliqueable con mailto:.
+
+8. Pie de página y derechos de autor
+- Observación: El texto de derechos reservados estaba como texto plano en el footer.
+- Corrección: Lo envolví dentro de la etiqueta semántica <small> para indicar legalmente los derechos reservados institucionales.
+================================================================================
