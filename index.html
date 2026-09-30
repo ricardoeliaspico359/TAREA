@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Registro Estudiantil y Mesa de Ayuda TI - ULEAM</title>
+</head>
+<body>
+
+    <header>
+        <p>Universidad Laica Eloy Alfaro de Manabí</p>
+        <p>Ingeniería en Tecnología de la Información</p>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="#registro">Registro</a></li>
+                <li><a href="#faq">Preguntas Frecuentes</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Portal de Registro Estudiantil y Mesa de Ayuda de TI</h1>
+
+        <section id="registro" aria-labelledby="titulo-registro">
+            <h2 id="titulo-registro">Formulario de Registro Estudiantil</h2>
+            <form action="#" method="post">
+                <p>
+                    <label for="nombres_apellidos">Nombres y Apellidos:</label>
+                    <input type="text" id="nombres_apellidos" name="nombres_apellidos" required autocomplete="name">
+                </p>
+
+                <p>
+                    <label for="cedula">Cédula de Identidad:</label>
+                    <input type="text" id="cedula" name="cedula" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" required autocomplete="off">
+                </p>
+
+                <p>
+                    <label for="correo_institucional">Correo Institucional:</label>
+                    <input type="email" id="correo_institucional" name="correo_institucional" pattern=".+@uleam\.edu\.ec" required autocomplete="email">
+                </p>
+
+                <p>
+                    <label for="carrera">Carrera Universitaria:</label>
+                    <select id="carrera" name="carrera" required>
+                        <option value="" disabled selected>Seleccione una carrera</option>
+                        <option value="ti">Ingeniería en Tecnología de la Información</option>
+                        <option value="software">Ingeniería de Software</option>
+                        <option value="sistemas">Ingeniería en Sistemas</option>
+                    </select>
+                </p>
+
+                <fieldset>
+                    <legend>Jornada Académica:</legend>
+                    <p>
+                        <input type="radio" id="jornada_matutina" name="jornada" value="matutina" required>
+                        <label for="jornada_matutina">Matutina</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="jornada_vespertina" name="jornada" value="vespertina">
+                        <label for="jornada_vespertina">Vespertina</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="jornada_nocturna" name="jornada" value="nocturna">
+                        <label for="jornada_nocturna">Nocturna</label>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <input type="checkbox" id="terminos" name="terminos" required>
+                    <label for="terminos">Acepto los términos y condiciones del servicio institucional</label>
+                </p>
+
+                <p>
+                    <button type="submit">Enviar Formulario</button>
+                </p>
+            </form>
+        </section>
+
+        <section id="faq" aria-labelledby="titulo-faq">
+            <h2 id="titulo-faq">Preguntas Frecuentes</h2>
+            
+            <details>
+                <summary>¿Cómo restablezco la contraseña de mi correo institucional?</summary>
+                <p>Debe ingresar a la plataforma de gestión de credenciales universitarias o solicitar un restablecimiento a través de la Mesa de Ayuda de TI con su cédula de identidad.</p>
+            </details>
+
+            <details>
+                <summary>¿Cuáles son los requisitos para la matrícula en Tecnología de la Información?</summary>
+                <p>Haber aprobado el periodo académico inmediato anterior o nivelación, no registrar valores pendientes y contar con las credenciales de acceso activas.</p>
+            </details>
+
+            <details>
+                <summary>¿Dónde puedo solicitar asistencia técnica para el aula virtual?</summary>
+                <p>Puede abrir un ticket de soporte directamente con el área de TI o acudir al laboratorio de soporte en las instalaciones de la facultad.</p>
+            </details>
+        </section>
+
+        <aside id="contacto" aria-labelledby="titulo-contacto">
+            <h2 id="titulo-contacto">Soporte y Contacto Docente</h2>
+            <address>
+                <p>Responsable: Ing. Carlos Mero Zambrano, Mgs.</p>
+                <p>Docente - Área de Soporte de TI</p>
+                <p>Correo electrónico: <a href="mailto:carlos.mero@uleam.edu.ec">carlos.mero@uleam.edu.ec</a></p>
+                <p>Ubicación: Edificio de la Facultad de Ciencias Informáticas, Campus Matriz Manta, Av. Circunvalación Vía a San Mateo, Manta, Manabí, Ecuador.</p>
+            </address>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Universidad Laica Eloy Alfaro de Manabí (ULEAM) - Dirección de Tecnologías de la Información</p>
+        <p><small>&copy; Todos los derechos reservados. ULEAM.</small></p>
+    </footer>
+
+</body>
+</html>
