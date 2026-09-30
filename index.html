@@ -8,8 +8,8 @@
 <body>
 
     <header>
-        <p>Universidad Laica Eloy Alfaro de Manabí</p>
-        <p>Ingeniería en Tecnología de la Información</p>
+        <p><strong>Universidad Laica Eloy Alfaro de Manabí</strong></p>
+        <p>Facultad de Ciencias Informáticas | Carrera de Ingeniería en Tecnología de la Información</p>
         <nav aria-label="Navegación principal">
             <ul>
                 <li><a href="#registro">Registro</a></li>
@@ -22,8 +22,10 @@
     <main>
         <h1>Portal de Registro Estudiantil y Mesa de Ayuda de TI</h1>
 
+        <!-- 2.1 y 2.2: Primera sección funcional con formulario accesible -->
         <section id="registro" aria-labelledby="titulo-registro">
             <h2 id="titulo-registro">Formulario de Registro Estudiantil</h2>
+            
             <form action="#" method="post">
                 <p>
                     <label for="nombres_apellidos">Nombres y Apellidos:</label>
@@ -37,7 +39,7 @@
 
                 <p>
                     <label for="correo_institucional">Correo Institucional:</label>
-                    <input type="email" id="correo_institucional" name="correo_institucional" pattern=".+@uleam\.edu\.ec" required autocomplete="email">
+                    <input type="email" id="correo_institucional" name="correo_institucional" pattern=".+@uleam[.]edu[.]ec" required autocomplete="email">
                 </p>
 
                 <p>
@@ -77,9 +79,10 @@
             </form>
         </section>
 
+        <!-- 2.3: Segunda sección con elementos nativos details y summary -->
         <section id="faq" aria-labelledby="titulo-faq">
             <h2 id="titulo-faq">Preguntas Frecuentes</h2>
-            
+
             <details>
                 <summary>¿Cómo restablezco la contraseña de mi correo institucional?</summary>
                 <p>Debe ingresar a la plataforma de gestión de credenciales universitarias o solicitar un restablecimiento a través de la Mesa de Ayuda de TI con su cédula de identidad.</p>
@@ -96,17 +99,21 @@
             </details>
         </section>
 
+        <!-- 2.4: Aside complementario con address semántico y enlace mailto -->
         <aside id="contacto" aria-labelledby="titulo-contacto">
             <h2 id="titulo-contacto">Soporte y Contacto Docente</h2>
             <address>
-                <p>Responsable: Ing. Carlos Mero Zambrano, Mgs.</p>
-                <p>Docente - Área de Soporte de TI</p>
+                <p>Responsable: Ing. Carlos Mero Zambrano, Mgs.<br>
+                Cargo: Docente - Área de Soporte de TI</p>
+                
                 <p>Correo electrónico: <a href="mailto:carlos.mero@uleam.edu.ec">carlos.mero@uleam.edu.ec</a></p>
-                <p>Ubicación: Edificio de la Facultad de Ciencias Informáticas, Campus Matriz Manta, Av. Circunvalación Vía a San Mateo, Manta, Manabí, Ecuador.</p>
+                
+                <p>Ubicación física: Edificio de la Facultad de Ciencias Informáticas, Campus Matriz Manta, Av. Circunvalación Vía a San Mateo, Manta, Manabí, Ecuador.</p>
             </address>
         </aside>
     </main>
 
+    <!-- 2.1: Pie institucional con derechos en etiqueta small -->
     <footer>
         <p>Universidad Laica Eloy Alfaro de Manabí (ULEAM) - Dirección de Tecnologías de la Información</p>
         <p><small>&copy; Todos los derechos reservados. ULEAM.</small></p>
